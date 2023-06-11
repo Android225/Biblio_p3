@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/first_frag">
+
+    <fragment
+        android:id="@+id/first_frag"
+        android:name="com.example.biblio_p3.first_frag"
+        android:label="first_frag" >
+        <action
+            android:id="@+id/action_first_frag_to_log_in_frag4"
+            app:destination="@id/log_in_frag4" />
+    </fragment>
+    <fragment
+        android:id="@+id/log_in_frag4"
+        android:name="com.example.biblio_p3.log_in_frag"
+        android:label="log_in_frag" >
+        <action
+            android:id="@+id/action_log_in_frag4_to_register_frag4"
+            app:destination="@id/register_frag4" />
+        <action
+            android:id="@+id/action_log_in_frag4_to_admin_home_frag"
+            app:destination="@id/admin_home_frag" />
+        <action
+            android:id="@+id/action_log_in_frag4_to_people_home_frag"
+            app:destination="@id/people_home_frag" />
+    </fragment>
+    <fragment
+        android:id="@+id/register_frag4"
+        android:name="com.example.biblio_p3.register_frag"
+        android:label="register_frag" >
+        <action
+            android:id="@+id/action_register_frag4_to_log_in_frag4"
+            app:destination="@id/log_in_frag4" />
+    </fragment>
+    <fragment
+        android:id="@+id/admin_home_frag"
+        android:name="com.example.biblio_p3.admin_home_frag"
+        android:label="admin_home_frag" >
+        <action
+            android:id="@+id/action_admin_home_frag_to_log_in_frag4"
+            app:destination="@id/log_in_frag4" />
+    </fragment>
+    <fragment
+        android:id="@+id/people_home_frag"
+        android:name="com.example.biblio_p3.people_home_frag"
+        android:label="people_home_frag" >
+        <action
+            android:id="@+id/action_people_home_frag_to_log_in_frag4"
+            app:destination="@id/log_in_frag4" />
+    </fragment>
+</navigation>
