@@ -1,5 +1,8 @@
 package com.example.biblio_p3;
 import android.content.ClipData;
+import android.content.ContentValues;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -7,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -20,9 +24,17 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class admin_list_peoples_frag extends Fragment {
+public class admin_list_peoples_frag extends Fragment{
+
 
     View view;
+
+    Button btnRead,btnAdd;
+
+    EditText etName, etEmail, etPassword;
+
+    DBHelper dbHelper;
+
     public admin_list_peoples_frag() {
         super(R.layout.admin_list_peoples_fragment);
     }
@@ -32,12 +44,40 @@ public class admin_list_peoples_frag extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.admin_list_peoples_fragment, container, false);
 
+        // Инициализация DBHelper с использованием контекста активности
+        dbHelper = new DBHelper(getContext());
+        SQLiteDatabase database = dbHelper.getWritableDatabase();
+
+        ContentValues contentValues = new ContentValues();
+
+
+
+
         List<Item> itemList = new ArrayList<Item>();
         RecyclerView recyclerView = view.findViewById(R.id.recycler_thi);
 
-        for(int i = 0; i < 200; i++) {
-            itemList.add(new Item( R.drawable.book, "book " + i));
+
+
+
+
+        Cursor cursor = database.query(DBHelper.TABLE_CONTACTS, null, null, null, null, null, null);
+
+        if (cursor.moveToFirst()) {
+            int idIndex = cursor.getColumnIndex(DBHelper.KEY_ID);
+            int nameIndex = cursor.getColumnIndex(DBHelper.KEY_NAME);
+            int emailIndex = cursor.getColumnIndex(DBHelper.KEY_MAIL);
+            do {
+                Log.d("mLog", "ID = " + cursor.getInt(idIndex) +
+                        ", name = " + cursor.getString(nameIndex) +
+                        ", email = " + cursor.getString(emailIndex));
+
+                itemList.add(new Item( R.drawable.ultra, "Пользователь " + cursor.getInt(idIndex) + ". Имя: " + cursor.getString(nameIndex) + " Почта: " + cursor.getString(emailIndex)));
+            } while (cursor.moveToNext());
+        } else {
+            Toast.makeText(getContext(), "Отсутствуют записи", Toast.LENGTH_SHORT).show();
+            Log.d("mLog", "0 rows");
         }
+        cursor.close();
 
         AdapterRecyclerView adapterRecyclerView = new AdapterRecyclerView(getContext(), itemList);
 
@@ -62,4 +102,6 @@ public class admin_list_peoples_frag extends Fragment {
 
         return view;
     }
+
 }
+
