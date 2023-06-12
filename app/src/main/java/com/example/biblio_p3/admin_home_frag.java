@@ -68,6 +68,18 @@ public class admin_home_frag extends Fragment {
             }
         });
 
+        view.findViewById(R.id.btnDelBooks).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+              /*  Bundle bundle = new Bundle();
+                bundle.putString("loginText", String.valueOf(((EditText) view
+                        .findViewById(R.id.login_text))
+                        .getText()));*/
+                Navigation.findNavController(view).navigate(R.id.action_admin_home_frag_to_admin_del_books_frag);
+            }
+        });
+
         return view;
     }
 }

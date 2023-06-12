@@ -37,7 +37,7 @@ public class first_frag extends Fragment {
                         .findViewById(R.id.EditFirst))
                         .getText()));
 
-                Navigation.findNavController(view).navigate(R.id.action_first_frag_to_log_in_frag4);
+               // Navigation.findNavController(view).navigate(R.id.action_first_frag_to_log_in_frag4);
             }
         });
 

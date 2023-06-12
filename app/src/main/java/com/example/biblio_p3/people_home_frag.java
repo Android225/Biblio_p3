@@ -77,13 +77,13 @@ public class people_home_frag extends Fragment {
             @Override
             public void onClick(View v) {
                 // Вывод сообщения Toast
-                Toast.makeText(getContext(), "Литература", Toast.LENGTH_SHORT).show();
+               // Toast.makeText(getContext(), "Литература", Toast.LENGTH_SHORT).show();
 
               /*  Bundle bundle = new Bundle();
                 bundle.putString("loginText", String.valueOf(((EditText) view
                         .findViewById(R.id.login_text))
                         .getText()));*/
-                // Navigation.findNavController(view).navigate(R.id.action_people_home_frag_to_log_in_frag4);
+                 Navigation.findNavController(view).navigate(R.id.action_people_home_frag_to_people_book_list_frag);
             }
         });
 

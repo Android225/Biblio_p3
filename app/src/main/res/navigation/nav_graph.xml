@@ -2,16 +2,8 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/first_frag">
+    app:startDestination="@id/log_in_frag4">
 
-    <fragment
-        android:id="@+id/first_frag"
-        android:name="com.example.biblio_p3.first_frag"
-        android:label="first_frag" >
-        <action
-            android:id="@+id/action_first_frag_to_log_in_frag4"
-            app:destination="@id/log_in_frag4" />
-    </fragment>
     <fragment
         android:id="@+id/log_in_frag4"
         android:name="com.example.biblio_p3.log_in_frag"
@@ -47,6 +39,9 @@
         <action
             android:id="@+id/action_admin_home_frag_to_admin_add_books_frag"
             app:destination="@id/admin_add_books_frag" />
+        <action
+            android:id="@+id/action_admin_home_frag_to_admin_del_books_frag"
+            app:destination="@id/admin_del_books_frag" />
     </fragment>
     <fragment
         android:id="@+id/people_home_frag"
@@ -55,6 +50,9 @@
         <action
             android:id="@+id/action_people_home_frag_to_log_in_frag4"
             app:destination="@id/log_in_frag4" />
+        <action
+            android:id="@+id/action_people_home_frag_to_people_book_list_frag"
+            app:destination="@id/people_book_list_frag" />
     </fragment>
     <fragment
         android:id="@+id/admin_list_peoples_frag"
@@ -71,5 +69,21 @@
         <action
             android:id="@+id/action_admin_add_books_frag_to_admin_home_frag"
             app:destination="@id/admin_home_frag" />
+    </fragment>
+    <fragment
+        android:id="@+id/admin_del_books_frag"
+        android:name="com.example.biblio_p3.admin_del_books_frag"
+        android:label="admin_del_books_frag" >
+        <action
+            android:id="@+id/action_admin_del_books_frag_to_admin_home_frag"
+            app:destination="@id/admin_home_frag" />
+    </fragment>
+    <fragment
+        android:id="@+id/people_book_list_frag"
+        android:name="com.example.biblio_p3.people_book_list_frag"
+        android:label="people_book_list_frag" >
+        <action
+            android:id="@+id/action_people_book_list_frag_to_people_home_frag"
+            app:destination="@id/people_home_frag" />
     </fragment>
 </navigation>
