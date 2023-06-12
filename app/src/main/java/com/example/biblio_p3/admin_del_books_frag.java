@@ -117,7 +117,7 @@ public class admin_del_books_frag extends Fragment implements View.OnClickListen
         ContentValues contentValues = new ContentValues();
 
         switch (v.getId()) {
-            case R.id.btnAddBook:
+            case R.id.btnDelBook:
                 Toast.makeText(getContext(), "В разработке", Toast.LENGTH_SHORT).show();
 /*
                 contentValues.put(DBHelper.KEY_BOOK_NAME, Book);

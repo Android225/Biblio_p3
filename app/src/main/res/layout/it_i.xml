@@ -15,6 +15,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
+        android:background="@color/back_color"
         app:layout_constraintStart_toEndOf="@+id/ImageViewList"
         app:layout_constraintTop_toTopOf="parent" />
 
