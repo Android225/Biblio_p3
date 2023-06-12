@@ -50,14 +50,8 @@ public class admin_list_peoples_frag extends Fragment{
 
         ContentValues contentValues = new ContentValues();
 
-
-
-
         List<Item> itemList = new ArrayList<Item>();
         RecyclerView recyclerView = view.findViewById(R.id.recycler_thi);
-
-
-
 
 
         Cursor cursor = database.query(DBHelper.TABLE_CONTACTS, null, null, null, null, null, null);

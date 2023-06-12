@@ -44,6 +44,9 @@
         <action
             android:id="@+id/action_admin_home_frag_to_admin_list_peoples_frag"
             app:destination="@id/admin_list_peoples_frag" />
+        <action
+            android:id="@+id/action_admin_home_frag_to_admin_add_books_frag"
+            app:destination="@id/admin_add_books_frag" />
     </fragment>
     <fragment
         android:id="@+id/people_home_frag"
@@ -59,6 +62,14 @@
         android:label="admin_list_peoples_frag" >
         <action
             android:id="@+id/action_admin_list_peoples_frag_to_admin_home_frag"
+            app:destination="@id/admin_home_frag" />
+    </fragment>
+    <fragment
+        android:id="@+id/admin_add_books_frag"
+        android:name="com.example.biblio_p3.admin_add_books_frag"
+        android:label="admin_add_books_frag" >
+        <action
+            android:id="@+id/action_admin_add_books_frag_to_admin_home_frag"
             app:destination="@id/admin_home_frag" />
     </fragment>
 </navigation>
