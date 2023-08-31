@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -111,6 +112,8 @@ public class log_in_frag extends Fragment /*implements View.OnClickListener*/ {
                             }
                         } while (cursor.moveToNext());
                     } else
+                        Toast.makeText(getContext(), "Неправильный логин или пароль!", Toast.LENGTH_SHORT).show();
+
                         Log.d("mLog","Пользователь не найден");
 
                     cursor.close();

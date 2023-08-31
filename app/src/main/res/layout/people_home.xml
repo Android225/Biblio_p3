@@ -33,60 +33,42 @@
         style="@style/button_style_one"
         android:layout_width="142dp"
         android:layout_height="132dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="48dp"
         android:text="Личный Кабинет"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnPeopleRead"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewlistr"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/viewlistr" />
 
     <Button
         android:id="@+id/btnPeopleRead"
         style="@style/button_style_one"
         android:layout_width="142dp"
         android:layout_height="132dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="55dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="32dp"
         android:text="Читальня"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewlistr"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/viewlistr" />
 
     <Button
         android:id="@+id/btnPeopleListRead"
         style="@style/button_style_one"
         android:layout_width="142dp"
         android:layout_height="132dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="140dp"
         android:text="Список прочитанного"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnBackToLogIn"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnPeopleCabinet"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        style="@style/button_style_one"
         android:id="@+id/btnBackToLogIn"
+        style="@style/button_style_one"
         android:layout_width="142dp"
         android:layout_height="132dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="149dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="140dp"
         android:text="Назад"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/btnPeopleCabinet"
-        app:layout_constraintTop_toBottomOf="@+id/btnPeopleRead"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

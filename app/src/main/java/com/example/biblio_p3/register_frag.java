@@ -17,17 +17,12 @@ import androidx.navigation.Navigation;
 
 public class register_frag extends Fragment implements View.OnClickListener{
     View view;
-
     Button btnRead,btnAdd;
-
     EditText etName, etEmail, etPassword;
-
     DBHelper dbHelper;
-
     public register_frag(){
         super(R.layout.register_fragment);
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 

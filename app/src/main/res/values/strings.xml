@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">doctors_appointment_hospital</string>
+    <string name="app_name">Biblioteka</string>
     <string name="contacts">Контакты</string>
     <string name="make_an_appointment">Записаться на приём</string>
     <string name="email_hosp">Почта: domashnaja_biblioteka@yandex.ru</string>
